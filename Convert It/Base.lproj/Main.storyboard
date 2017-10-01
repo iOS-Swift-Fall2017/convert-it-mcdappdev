@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,38 +23,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KCh-2H-6vc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="KCh-2H-6vc">
                                 <rect key="frame" x="63" y="36" width="164" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5C6-cs-cQ2"/>
+                                    <action selector="textFieldValueChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="RGo-dC-Fun"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-N3-Xdc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-N3-Xdc">
                                 <rect key="frame" x="256" y="40" width="103" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="5hP-Y7-xTl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-kc-KZh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQN-kc-KZh">
                                 <rect key="frame" x="16" y="74" width="343" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="IJh-qG-mRV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Conversion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-D7-PxI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Conversion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8o-D7-PxI">
                                 <rect key="frame" x="94" y="140" width="187" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZUd-n6-fPU"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-1H-4xH">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-1H-4xH">
                                 <rect key="frame" x="142" y="430" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.50761196808582043" green="0.76980906063703647" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9wM-zQ-G8J"/>
+                                    <constraint firstAttribute="width" constant="91" id="D6x-RS-yAx"/>
+                                </constraints>
                                 <state key="normal" title="Convert">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -61,19 +74,83 @@
                                     <action selector="convertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykr-WJ-7oh"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-2q-DId">
-                                <rect key="frame" x="16" y="169" width="343" height="171"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bbs-Tw-3f2">
+                                <rect key="frame" x="16" y="372" width="292.5" height="28"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rounding:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbQ-ga-vFL">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-Sb-AGQ">
+                                        <rect key="frame" x="89.5" y="0.0" width="203" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="b2h-II-6zV"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="0.0"/>
+                                            <segment title="0.00"/>
+                                            <segment title="0.000"/>
+                                            <segment title="None"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.40844550728797913" green="0.61624777317047119" blue="0.78436797857284546" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="decimalSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="giR-bE-VW5"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4NY-Sl-O6I">
+                                <rect key="frame" x="16" y="38" width="39" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="39" id="ayL-Hq-2EE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+"/>
+                                    <segment title="-"/>
+                                </segments>
+                                <color key="tintColor" red="0.50874537229537964" green="0.77227216958999634" blue="0.98042583465576172" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="signSelected:" destination="BYZ-38-t0r" eventType="valueChanged" id="3JD-Xz-nvt"/>
+                                </connections>
+                            </segmentedControl>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXM-2q-DId">
+                                <rect key="frame" x="27.5" y="169" width="320" height="171"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.70280326059766685" green="0.69940807576386177" blue="0.70619844543147203" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Qnl-N3-Xdc" firstAttribute="trailing" secondItem="UQN-kc-KZh" secondAttribute="trailing" id="4G5-3n-DvJ"/>
+                            <constraint firstItem="4NY-Sl-O6I" firstAttribute="leading" secondItem="UQN-kc-KZh" secondAttribute="leading" id="CXe-py-FPi"/>
+                            <constraint firstItem="4NY-Sl-O6I" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="D3G-Pz-1eI"/>
+                            <constraint firstItem="Qnl-N3-Xdc" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="E9Q-Gg-qcy"/>
+                            <constraint firstItem="KCh-2H-6vc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="HM7-Dg-xGz"/>
+                            <constraint firstItem="CXM-2q-DId" firstAttribute="top" secondItem="a8o-D7-PxI" secondAttribute="bottom" constant="8" symbolic="YES" id="IcA-LJ-qY1"/>
+                            <constraint firstItem="Jih-1H-4xH" firstAttribute="top" secondItem="bbs-Tw-3f2" secondAttribute="bottom" constant="30" id="Jrx-rE-Qgf"/>
+                            <constraint firstItem="4NY-Sl-O6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KRK-bb-9gK"/>
+                            <constraint firstItem="Qnl-N3-Xdc" firstAttribute="leading" secondItem="KCh-2H-6vc" secondAttribute="trailing" constant="29" id="OgR-lW-QE7"/>
+                            <constraint firstItem="Jih-1H-4xH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="Rd6-tw-L9u"/>
+                            <constraint firstItem="a8o-D7-PxI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="94" id="Txh-dD-7SR"/>
+                            <constraint firstItem="4NY-Sl-O6I" firstAttribute="centerY" secondItem="Qnl-N3-Xdc" secondAttribute="centerY" id="YBd-Sk-O5h"/>
+                            <constraint firstItem="KCh-2H-6vc" firstAttribute="leading" secondItem="4NY-Sl-O6I" secondAttribute="trailing" constant="8" symbolic="YES" id="f2E-FH-8i9"/>
+                            <constraint firstItem="UQN-kc-KZh" firstAttribute="top" secondItem="KCh-2H-6vc" secondAttribute="bottom" constant="8" symbolic="YES" id="lli-oQ-Dq3"/>
+                            <constraint firstItem="bbs-Tw-3f2" firstAttribute="top" secondItem="CXM-2q-DId" secondAttribute="bottom" constant="32" id="ngP-0h-eug"/>
+                            <constraint firstItem="CXM-2q-DId" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pMQ-2x-wAu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jih-1H-4xH" secondAttribute="bottom" constant="207" id="qS9-32-Yh1"/>
+                            <constraint firstItem="UQN-kc-KZh" firstAttribute="top" secondItem="4NY-Sl-O6I" secondAttribute="bottom" constant="8" symbolic="YES" id="tvw-PN-CeX"/>
+                            <constraint firstItem="a8o-D7-PxI" firstAttribute="top" secondItem="UQN-kc-KZh" secondAttribute="bottom" constant="14" id="vCa-zb-zxX"/>
+                            <constraint firstItem="UQN-kc-KZh" firstAttribute="centerX" secondItem="a8o-D7-PxI" secondAttribute="centerX" id="xMG-XB-PGd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="decimalSegment" destination="CBK-Sb-AGQ" id="Rjv-GX-hGy"/>
                         <outlet property="formulaPicker" destination="CXM-2q-DId" id="jCg-na-Vuw"/>
                         <outlet property="fromUnitsLabel" destination="Qnl-N3-Xdc" id="6EI-mf-GON"/>
                         <outlet property="resultsLabel" destination="UQN-kc-KZh" id="Rac-yc-Zad"/>
+                        <outlet property="signSegment" destination="4NY-Sl-O6I" id="uZe-Sh-p6N"/>
                         <outlet property="userInput" destination="KCh-2H-6vc" id="mv7-po-v7L"/>
                     </connections>
                 </viewController>
